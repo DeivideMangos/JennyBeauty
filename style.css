@@ -1,0 +1,708 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", sans-serif;
+  font-weight: 100;
+  background-color: #fdf1f4;
+  overflow-x: hidden;
+  /* Adicionado para evitar rolagem horizontal */
+}
+
+
+/* Estilos para o header */
+header {
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a navegação */
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .navigation ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.navigation ul li a {
+  font-family: "Lora", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #6e4b4b;
+  font-size: 25px;
+  text-decoration: none;
+  padding: 8px 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+  background-color: #f4c2c2;
+  color: #fff;
+}
+
+
+/* #d9d0c5 #f1eae6 #8c847c #a49c94 #ac9c94 */
+
+.hero {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: block;
+  margin: 5px auto;
+  /* Centraliza o botão horizontalmente */
+  background-color: #f4c2c2;
+  color: #6e4b4b;
+  padding: 20px 25px;
+  font-family: "Lora", sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 22px;
+  margin: 25px 500px 25px 600px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  /* Garante que o texto esteja centralizado */
+}
+
+
+.cta-button:hover {
+  background-color: #d9d0c5;
+}
+
+/* Estilos do carrossel */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 10px 10px;
+  position: relative;
+  width: 100%;
+  /* Agora ocupa toda a largura da página */
+  max-width: 100%;
+  /* Garante que não tenha limites de largura */
+  overflow: hidden;
+  /* Esconde o conteúdo extra */
+}
+
+.carousel-item {
+  flex: 20% 20% 20%;
+  /* Ajusta o tamanho do item para 30% da largura do carrossel */
+  height: 400px;
+  /* Aumenta a altura dos itens */
+  margin: 0 10px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
+}
+
+.carousel-item img {
+  width: 100%;
+  /* Garante que as imagens ocupem 100% da largura do item */
+  height: 100%;
+  /* Garante que as imagens ocupem 100% da altura */
+  object-fit: cover;
+}
+
+.carousel-item.active {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.carousel-item:hover {
+  transform: scale(1.1);
+}
+
+.carousel-item:not(.active) {
+  opacity: 0.5;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-nav.left {
+  left: 0;
+  /* Agora encostado no canto esquerdo */
+}
+
+.carousel-nav.right {
+  right: 0;
+  /* Agora encostado no canto direito */
+}
+
+h1 {
+  font-family: "Lora", sans-serif;
+  font-weight: 800;
+  color: #6e4b4b;
+}
+
+p {
+  color: #6e4b4b;
+  font-family: "Lora", sans-serif;
+  font-weight: 400;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 30px;
+}
+
+.about-designer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+
+}
+
+.designer-photo img {
+  width: 500px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.designer-intro {
+  max-width: 500px;
+}
+
+.designer-intro h2 {
+  font-family: "Lora", sans-serif;
+  font-weight: 1000;
+  color: #6e4b4b;
+  font-size: 32px;
+  margin-bottom: 35px;
+  margin-top: 20px;
+}
+
+.designer-intro p {
+  font-family: "Lora", sans-serif;
+  font-weight: 400;
+  color: #6e4b4b;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #FFC0CB;
+  color: #6e4b4b;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin: 20px auto;
+  /* margem e centralização */
+}
+
+.cta-button-container {
+  text-align: center;
+  /* centraliza o botão no contêiner */
+  margin: 20px 0;
+  /* margem ao redor do contêiner */
+}
+
+
+.cta-button:hover {
+  background-color: #d9d0c5;
+}
+
+/* Seção de Modelos */
+.modelos {
+  padding: 50px 20px 80px 20px;
+  text-align: center;
+  background: #ffdddd;
+
+}
+
+.modelos h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #6e4b4b;
+  margin-bottom: 40px;
+}
+
+.modelos-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Exatamente 4 colunas */
+  gap: 20px;
+  justify-items: center;
+}
+
+.modelo-item {
+  text-align: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.modelo-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.modelo-item p {
+  margin-top: 10px;
+  font-family: 'Lora', serif;
+  color: #6e4b4b;
+}
+
+.modelo-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .modelos-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    /* Ajusta para 2 colunas em telas médias */
+  }
+}
+
+@media (max-width: 600px) {
+  .modelos-gallery {
+    grid-template-columns: 1fr;
+    /* Ajusta para 1 coluna em telas menores */
+  }
+}
+
+.modelo-description p {
+  font-size: 20px;
+}
+
+.modelo-description h3 {
+  font-size: 23px;
+}
+
+/* AGENDAMENTO */
+
+/* Seção de Agendamento */
+.appointment {
+  background-color: #f5f5f5;
+  padding: 40px;
+  /* Aumentado para mais espaço */
+  text-align: center;
+  margin-top: 40px;
+  border-radius: 10px;
+  /* Bordas arredondadas para suavizar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+}
+
+.appointment h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  color: #333;
+}
+
+.appointment p {
+  font-family: 'Lora', serif;
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 25px;
+  margin-top: 3px;
+}
+
+.appointment-link {
+  text-decoration: none;
+}
+
+.appointment-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ff69b4;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.appointment-button:hover {
+  background-color: #ff85c2;
+}
+
+.appointment-button .icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* Seção de Contato e Localização */
+.contact-location {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 50px 50px 100px;
+  background-color: #fdf1f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  /* Espaço acima para separação das seções */
+}
+
+.contact-localizacao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 30px 10px 30px 30px;
+  background-color: #fdf1f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  /* Espaço acima para separação das seções */
+  align-items: center;
+  background-color: #ffe4ec;
+}
+
+.contact-info,
+.contact-form {
+  padding: 30px;
+  /* Mais espaço para um layout mais arejado */
+  background: #fff;
+  /* Fundo branco */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  /* Sombra mais pronunciada */
+  border-radius: 15px;
+  /* Bordas arredondadas */
+  margin: 20px 0;
+  /* Margem superior e inferior */
+  transition: transform 0.3s;
+  /* Transição suave ao passar o mouse */
+}
+
+.contact-info:hover,
+.contact-form:hover,
+.map:hover {
+  transform: translateY(-5px);
+  /* Efeito de elevação ao passar o mouse */
+}
+
+.contact-info h2,
+.contact-form h2,
+.map h2 {
+  font-family: "Lora", sans-serif;
+  /* Fonte serifada */
+  color: #6e4b4b;
+  /* Cor do título */
+  font-size: 32px;
+  /* Tamanho maior para o título */
+  margin-bottom: 20px;
+  /* Mais espaço abaixo do título */
+  text-align: center;
+  /* Centralizar os títulos */
+}
+
+.contact-info ul {
+  list-style: none;
+  /* Remover marcadores padrão */
+  padding: 0;
+  /* Sem preenchimento */
+  font-family: "Lora", sans-serif;
+  /* Fonte da lista */
+  color: #6e4b4b;
+  /* Cor do texto */
+  text-align: center;
+  /* Centralizar texto da lista */
+}
+
+.contact-info li {
+  margin: 40px 20px;
+  /* Mais espaço entre os itens */
+  font-size: 20px;
+  /* Aumentar tamanho da fonte */
+}
+
+.contact-form label {
+  display: block;
+  /* Exibir como bloco */
+  font-family: "Lora", sans-serif;
+  /* Fonte do label */
+  color: #6e4b4b;
+  /* Cor do texto do label */
+  margin: 16px 4px 0px;
+  /* Margens ajustadas */
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  /* Largura total */
+  padding: 15px;
+  /* Espaçamento interno maior */
+  border-radius: 8px;
+  /* Bordas mais arredondadas */
+  border: 1px solid #ddd;
+  /* Borda cinza clara */
+  font-size: 16px;
+  /* Tamanho da fonte */
+  transition: border 0.3s ease;
+  /* Transição suave */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #ff69b4;
+  /* Borda rosa ao focar */
+  outline: none;
+  /* Remover contorno padrão */
+}
+
+.contact-form button {
+  margin-top: 15px;
+  /* Margem acima do botão */
+  background-color: #ff69b4;
+  /* Cor de fundo do botão */
+  color: #fff;
+  /* Texto branco */
+  padding: 12px 25px;
+  /* Maior preenchimento */
+  font-size: 18px;
+  /* Tamanho da fonte */
+  border: none;
+  /* Sem borda */
+  border-radius: 8px;
+  /* Bordas arredondadas */
+  cursor: pointer;
+  /* Cursor de mão */
+  transition: background-color 0.3s ease;
+  /* Transição suave */
+}
+
+.contact-form button:hover {
+  background-color: #d9d0c5;
+  /* Cor ao passar o mouse */
+}
+
+/* Estilos para os ícones das redes sociais */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  /* Centralizar os ícones */
+  margin-top: 25px;
+  /* Mais espaço acima */
+}
+
+.social-icons a {
+  margin: 20px 15px;
+  /* Espaço lateral entre ícones */
+  color: #ff69b4;
+  /* Cor rosa dos ícones */
+  font-size: 55px;
+  /* Tamanho maior para os ícones */
+  transition: color 0.3s ease;
+  /* Transição suave */
+}
+
+.social-icons a:hover {
+  color: #d9d0c5;
+  /* Cor ao passar o mouse */
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact-location {
+    grid-template-columns: 1fr;
+    /* Uma coluna em telas menores */
+  }
+}
+
+.services {
+  padding: 40px;
+  /* Mais espaço em torno da seção */
+  background-color: #f0f8ff;
+  /* Fundo azul claro para destacar */
+  border-radius: 8px;
+  /* Bordas arredondadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil */
+  margin: 20px 0;
+  /* Margem superior e inferior */
+}
+
+.service-item {
+  margin-bottom: 30px;
+  /* Espaçamento entre os itens de serviço */
+  padding: 20px;
+  /* Espaçamento interno */
+  border: 1px solid #d1d1d1;
+  /* Borda cinza clara */
+  border-radius: 5px;
+  /* Bordas arredondadas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Transição suave */
+  margin-top: 20px;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  /* Efeito de elevação ao passar o mouse */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  /* Sombra mais intensa ao passar o mouse */
+}
+
+.title {
+  margin-bottom: 20px !important;
+}
+
+.service-item h3 {
+  font-family: 'Lobster', cursive;
+  /* Fonte mais estilizada para o título */
+  color: #2c3e50;
+  /* Cor escura para o título */
+  margin-bottom: 10px;
+  /* Espaço abaixo do título */
+  font-size: 28px;
+  /* Tamanho da fonte aumentado */
+}
+
+.service-item p {
+  font-family: 'Lora', serif;
+  /* Fonte serifada para o corpo do texto */
+  color: #34495e;
+  /* Tom de azul escuro para o texto */
+  line-height: 1.6;
+  /* Maior espaçamento entre linhas */
+  font-size: 21px;
+  /* Tamanho da fonte aumentado */
+}
+
+.service-item ul {
+  margin: 10px 0;
+  padding-left: 20px;
+  /* Indentação à esquerda */
+}
+
+.service-item li {
+  margin: 5px 0;
+  /* Espaçamento entre os itens da lista */
+  position: relative;
+  /* Para adicionar um marcador personalizado */
+  font-size: 20px;
+  /* Tamanho da fonte aumentado */
+}
+
+.service-item li:before {
+  content: '✔';
+  /* Marcador personalizado */
+  position: absolute;
+  /* Posicionamento absoluto */
+  left: -20px;
+  /* Alinhado à esquerda */
+  color: #27ae60;
+  /* Cor verde para o marcador */
+}
+
+strong {
+  font-size: 22px;
+  margin: 2px;
+}
+
+footer {
+  background-color: #f4c2c2;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-designer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .modelos h2 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-item {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .contact-info,
+  .contact-form {
+    max-width: 100%;
+  }
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+  .contact-localizacao iframe {
+    width: 385px;
+    /* Largura responsiva para mobile */
+    height: 250px;
+    /* Altura menor para mobile */
+  }
+}
